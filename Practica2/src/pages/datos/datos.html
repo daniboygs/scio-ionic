@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Datos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+      <img src="{{ user?.avatar_url }}">
+      <h2><p>{{ user?.login }}</p></h2>
+      <p>Nombre: {{ user?.name }}</p>
+      <p>Email: {{ user?.email }}</p>
+      <p>Followers: {{ user?.followers }}</p>
+      <p>Following: {{ user?.following }}</p>
+
+  </ion-list>
+
+      
+
+</ion-content>

@@ -1,0 +1,78 @@
+
+<ion-card>
+
+<ion-card-header>
+
+  <ion-navbar>
+    <ion-title>Card</ion-title>
+  </ion-navbar>
+
+</ion-card-header>
+
+
+<ion-card-content padding>
+
+    <h3>List</h3>
+      <ion-list>
+        <ion-item>Obj1</ion-item>
+        <ion-item>Obj2</ion-item>
+        <ion-item>Obj3</ion-item>
+      </ion-list>
+
+      <ion-fab right bottom>
+          <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>
+          <ion-fab-list side="left">
+            <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+            <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+            <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+            <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+          </ion-fab-list>
+        </ion-fab>
+      
+ 
+      <h3>Radio</h3>
+      <ion-list radio-group [(ngModel)]="relationship">
+        <ion-item>
+          <ion-label>R1</ion-label>
+          <ion-radio value="friends" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>R2</ion-label>
+          <ion-radio value="family"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>R3</ion-label>
+          <ion-radio value="enemies" [disabled]="isDisabled"></ion-radio>
+        </ion-item>
+      </ion-list>
+
+      <h3>Select</h3>
+      <ion-item>
+        <ion-label>Opciones</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="f">OP1</ion-option>
+          <ion-option value="m">OP2</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <h3>Toggle</h3>
+      <ion-item>
+        <ion-label>T1</ion-label>
+        <ion-toggle [(ngModel)]="T1"></ion-toggle>
+      </ion-item>
+
+      <h3>Checkbox</h3>
+      <ion-item>
+        <ion-label>Check</ion-label>
+        <ion-checkbox [(ngModel)]="Check"></ion-checkbox>
+      </ion-item>
+
+      <h3>DateTime</h3>
+      <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+
+
+</ion-card-content>
+</ion-card>
