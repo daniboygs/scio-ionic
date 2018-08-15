@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Contacts
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <h1>Contacts</h1>
+  <br>
+  <ion-item *ngFor="let contact of contactsList">
+    <ion-avatar item-start>
+      <img [src]="contact.photos[0].value ">
+    </ion-avatar>
+
+    <h2>{{contact.displayName }}</h2>
+      <p>Device: {{contact.phoneNumbers[0].type}} - Number: {{contact.phoneNumbers[0].value}}</p>
+
+  </ion-item>
+  
+</ion-content>
