@@ -1,0 +1,58 @@
+page-chat {
+
+}
+ion-footer{
+    background-color: darkgray;
+}
+
+#messageBox{
+    width: 100%;
+}
+
+#messageBoxHeader{
+    width: 100%;
+    text-align: center;
+    text-decoration-color: white;
+    background-color: #4a4a4a;
+}
+#messageInput{
+    float: left;
+    width: 89%;
+    border-radius: 5px;
+}
+
+.messageUser{
+    text-decoration: black;
+    font-size: 20px;
+}
+.messageBody{
+    text-decoration-color: black;
+    font-size: 15px;
+}
+.messageDate{
+    text-decoration-color: cornflowerblue;
+    font-size: 4px;
+}
+
+#btnSend{
+    float: right;
+    width: 9%;
+    border-radius: 7px;
+    background-color: #25cf75;
+}
+
+#rightMessage{
+    width: 48%;
+    float: right;
+    border-radius: 5px;
+    background-color: #57c189;
+    text-align: right;
+}
+
+#leftMessage{
+    width: 48%;
+    float: left;
+    border-radius: 5px;
+    background-color: #e7e2e1;
+    text-align: left;
+}

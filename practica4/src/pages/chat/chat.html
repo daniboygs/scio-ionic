@@ -1,0 +1,36 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>chat</ion-title>
+  </ion-navbar>
+  <ion-item id="messageBoxHeader">
+      <label>{{user}}´s chat</label>
+  </ion-item>
+</ion-header>
+
+<ion-content padding>
+  <ion-list class="text" *ngFor="let item of items" >
+    <ion-item id="messageBox">
+      <ion-item *ngIf='user!=item.user' id="leftMessage">
+        <h3 class="messageUser">{{item.user}}</h3>
+        <p class="messageBody">{{item.body}}</p>
+        <p class="messageDate">{{getDate(item.date) | date:"MM/dd/yyyy 'at' h:mma"}}</p>
+      </ion-item>
+
+      <ion-item *ngIf='user==item.user' id="rightMessage">
+        <h3 class="messageUser">{{item.user}}</h3>
+        <p class="messageBody">{{item.body}}</p>
+        <p class="messageDate">{{getDate(item.date) | date:"MM/dd/yyyy 'at' h:mma"}}</p>
+      </ion-item>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+      <ion-input [(ngModel)]="messageInput" aria-placeholder="Writte a message" #message id="messageInput"></ion-input>
+      <button ion-button color="primary" full (click)="send(message.value)" id="btnSend">></button>
+  </ion-toolbar>
+</ion-footer>
